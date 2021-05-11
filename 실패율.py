@@ -13,8 +13,7 @@ def solution(N, stages):
     sum[-1] = cnt[-1]
     for i in range(N, -1, -1):
         sum[i] = cnt[i] + sum[i+1]
-    answer = []
-    for i in range(1, N+1):
-        answer.append((0, i) if sum[i] == 0 else (cnt[i]/sum[i], i))
+    answer = [(0, i) if sum[i] == 0 else (cnt[i]/sum[i], i)
+              for i in range(1, N+1)]
     answer.sort(key=A)
     return [arg[1] for arg in answer]
