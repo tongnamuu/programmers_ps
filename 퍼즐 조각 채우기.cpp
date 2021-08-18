@@ -3,7 +3,6 @@
 #include <algorithm>
 #include <iostream>
 using namespace std;
-
 const int dx[4] = {0,0,-1,1};
 const int dy[4] = {-1,1,0,0};
 int visit[51][51];
@@ -33,7 +32,6 @@ void point_to_map(vector<pair<int, int>>& p){
         map[x.first - minx][x.second-miny] = 1;
     }
 }
-
 void rotate() {
     for(int i=0;i<6;++i){
         for(int j=0;j<6;++j){
@@ -56,7 +54,6 @@ void rotate() {
         map[x.first - minx][x.second-miny] = 1;
     }
 }
-
 long long make_num() {
     long long num = 0;
     for(int i=0;i<6;++i){
